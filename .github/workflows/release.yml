@@ -5,7 +5,12 @@ on:
     branches:
       - main
       - feature/github_actions
-
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Name of the person'
+        required: true
+        default: 'World'
 jobs:
   build:
     runs-on: ubuntu-latest
